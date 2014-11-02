@@ -10,8 +10,10 @@ class GameApp < Sinatra::Base
     @game = RPSGame.new(user_move.to_sym)
     if @game.won?
       @result = "YOU"
+      @skeleton = "../happy_skeleton.gif"
     elsif @game.lost?
       @result = "COMPUTER"
+      @skeleton = "../dead_skeleton.gif"
     elsif @game.tied?
       @result = "NO ONE"
     end
