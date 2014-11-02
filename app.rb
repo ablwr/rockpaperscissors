@@ -2,7 +2,7 @@ require_relative 'config/environment'
 
 class GameApp < Sinatra::Base
   get '/' do
-    "Use the URL ('/rps/<your move here>') to make a move!"
+    erb :intro
   end
 
   get '/rps/:play' do
